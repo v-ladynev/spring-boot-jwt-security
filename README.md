@@ -9,9 +9,9 @@ A symmetric key is used to sign tokens for simplicity. It is better to use an as
 
 There are three kind of resources in this application:
 
- * localhost:8080/campaigns
- * localhost:8080/reports
- * localhost:8080/users
+ * http://localhost:8080/campaigns
+ * http://localhost:8080/reports
+ * http://localhost:8080/users
 
 Resources are protected based on a JWT token. Access to the resources is based on user roles.
 
@@ -19,14 +19,12 @@ Resources are protected based on a JWT token. Access to the resources is based o
 
 Application has predefined set of users. There are users and their roles:
  
-| User Login         | Password           | User Roles          | Can access                                                              |
-|--------------------|--------------------|---------------------|--------------------------------------------------------------------------|
-| admin              | admin              | ADMIN               | localhost:8080/campaigns   localhost:8080/reports   localhost:8080/users |
-| advertiser         | advertiser         | ADVERTISER          | localhost:8080/campaigns                                                 |
-| analyst            | analyst            | ANALYST             | localhost:8080/reports                                                   |
-| advertiser_analyst | advertiser_analyst | ADVERTISER, ANALYST | localhost:8080/campaigns   localhost:8080/reports                        | 
-
-
+| User Login         | Password           | User Roles          | Can acccess                                                                                 |
+|--------------------|--------------------|---------------------|---------------------------------------------------------------------------------------------|
+| admin              | admin              | ADMIN               | http://localhost:8080/campaigns  http://localhost:8080/reports  http://localhost:8080/users |
+| advertiser         | advertiser         | ADVERTISER          | http://localhost:8080/campaigns                                                             |
+| analyst            | analyst            | ANALYST             | http://localhost:8080/reports                                                               |
+| advertiser_analyst | advertiser_analyst | ADVERTISER, ANALYST | http://localhost:8080/campaigns  http://localhost:8080/reports                              |
 
 ## Build and Run
 
